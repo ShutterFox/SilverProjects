@@ -16,12 +16,12 @@
                 <td>@Html.EditorFor(o => o.CostPerL)</td>
                 <td>@Html.EditorFor(o => o.CostPumped)</td>
                 <td>@Html.EditorFor(o => o.Miles)</td>
-                <td>@Model.Result</td>
+                <td>@Html.DisplayTextFor(o => o.Result)</td>
                 </tr>
         </tbody>
     </table>
     <br/>
     <br/>
-    <input type="submit" />
+    <input type="submit", value="Calculate" />
 }
 
