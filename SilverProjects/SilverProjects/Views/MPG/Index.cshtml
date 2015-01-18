@@ -2,19 +2,26 @@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(o => o.CostPerL)
-    @Html.EditorFor(o => o.CostPerL)
+    <table>
+        <thead>
+            <tr>
+        <th>@Html.LabelFor(o => o.CostPerL)</th>
+        <th>@Html.LabelFor(o => o.CostPumped)</th>
+        <th>@Html.LabelFor(o => o.Miles)</th>
+        <th>@Html.LabelFor(o => o.Result)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Html.EditorFor(o => o.CostPerL)</td>
+                <td>@Html.EditorFor(o => o.CostPumped)</td>
+                <td>@Html.EditorFor(o => o.Miles)</td>
+                <td>@Model.Result</td>
+                </tr>
+        </tbody>
+    </table>
     <br/>
-    @Html.LabelFor(o => o.CostPumped)
-    @Html.EditorFor(o => o.CostPumped)
     <br/>
-    @Html.LabelFor(o => o.Miles)
-    @Html.EditorFor(o => o.Miles)
-    <br/>
-    <input type="submit"/>
-    <br/>
-    
-    @Html.LabelFor(o => o.Result)
-    @Model.Result
+    <input type="submit" />
 }
 
