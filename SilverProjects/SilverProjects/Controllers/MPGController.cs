@@ -12,11 +12,24 @@ namespace SilverProjects.Controllers
 
     public class MPGController : Controller
     {
-        // GET: MPG
+        [HttpGet]
         public ActionResult Index()
         {
             var viewModel = new MPGIndexViewModel();
-            viewModel.Bob = "butts";
+            
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Index(MPGIndexViewModel viewModel)
+        {
+            decimal LIT_GAL_CONV = 4.54m;
+            decimal litresPumped, gallonsPumped;
+            litresPumped = viewModel.CostPumped / viewModel.CostPerL;
+            gallonsPumped = litresPumped / LIT_GAL_CONV;
+            viewModel.Result = viewModel.Miles / gallonsPumped;
+
 
             return View(viewModel);
         }

@@ -1,3 +1,20 @@
 ﻿@model SilverProjects.Models.MPGIndexViewModel
 
-@Model.Bob
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(o => o.CostPerL)
+    @Html.EditorFor(o => o.CostPerL)
+    <br/>
+    @Html.LabelFor(o => o.CostPumped)
+    @Html.EditorFor(o => o.CostPumped)
+    <br/>
+    @Html.LabelFor(o => o.Miles)
+    @Html.EditorFor(o => o.Miles)
+    <br/>
+    <input type="submit"/>
+    <br/>
+    
+    @Html.LabelFor(o => o.Result)
+    @Model.Result
+}
+
