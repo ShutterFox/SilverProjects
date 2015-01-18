@@ -28,15 +28,13 @@ namespace SilverProjects.Controllers
             {
                 return this.View(viewModel);
             }
-            
 
-            decimal LIT_GAL_CONV = 4.54m;
-            decimal litresPumped, gallonsPumped;
-            litresPumped = viewModel.CostPumped / viewModel.CostPerL;
-            gallonsPumped = litresPumped / LIT_GAL_CONV;
+            const decimal LIT_GAL_CONV = 4.54m;
+            var litresPumped = viewModel.CostPumped / viewModel.CostPerL;
+            var gallonsPumped = litresPumped / LIT_GAL_CONV;
             var result = viewModel.Miles / gallonsPumped;
             viewModel.Result = Math.Round(result, 2);
-
+            viewModel.CanShowResult = true;
             return View(viewModel);
         }
     }

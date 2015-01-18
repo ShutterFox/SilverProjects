@@ -25,6 +25,8 @@ namespace SilverProjects.Models
         [DisplayName("Miles Travelled")]
         public decimal Miles { get; set; }
 
+        public bool CanShowResult { get; set; }
+
         [DisplayName("Result")]
         public decimal Result { get; set; }
     }
