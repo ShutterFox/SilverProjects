@@ -28,8 +28,8 @@ namespace SilverProjects.Controllers
             decimal litresPumped, gallonsPumped;
             litresPumped = viewModel.CostPumped / viewModel.CostPerL;
             gallonsPumped = litresPumped / LIT_GAL_CONV;
-            viewModel.Result = viewModel.Miles / gallonsPumped;
-
+            var result = viewModel.Miles / gallonsPumped;
+            viewModel.Result = Math.Round(result, 2);
 
             return View(viewModel);
         }
