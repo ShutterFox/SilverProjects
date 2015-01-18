@@ -6,16 +6,23 @@ using System.Web;
 namespace SilverProjects.Models
 {
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public class MPGIndexViewModel
     {
-        [DisplayName("Cost per Litre")]
+        [Required]
+        [Range(0.01, 50)]
+        [DisplayName("Cost per Litre (£)")]
         public decimal CostPerL { get; set; }
 
-        [DisplayName("Amount Pumped")]
+        [Required]
+        [Range(1, 100)]
+        [DisplayName("Amount Pumped (£)")]
         public decimal CostPumped { get; set; }
 
-    [DisplayName("Miles Travelled")]
+        [Required]
+        [Range(1, 1000)]
+        [DisplayName("Miles Travelled")]
         public decimal Miles { get; set; }
 
         [DisplayName("Result")]

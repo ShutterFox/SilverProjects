@@ -24,6 +24,12 @@ namespace SilverProjects.Controllers
         [HttpPost]
         public ActionResult Index(MPGIndexViewModel viewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                return this.View(viewModel);
+            }
+            
+
             decimal LIT_GAL_CONV = 4.54m;
             decimal litresPumped, gallonsPumped;
             litresPumped = viewModel.CostPumped / viewModel.CostPerL;
