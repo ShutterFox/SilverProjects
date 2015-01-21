@@ -163,6 +163,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MiscController.cs" />
     <Compile Include="Controllers\MPGController.cs" />
+    <Compile Include="Controllers\PhotographsController.cs" />
     <Compile Include="Controllers\PhotographyController.cs" />
     <Compile Include="Controllers\ProgrammingController.cs" />
     <Compile Include="Global.asax.cs">
@@ -172,6 +173,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MPGIndexViewModel.cs" />
+    <Compile Include="Models\Photographs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -238,6 +240,11 @@
     <Content Include="Views\Photography\Index.cshtml" />
     <Content Include="Views\Programming\Index.cshtml" />
     <Content Include="Views\Misc\Index.cshtml" />
+    <Content Include="Views\Photographs\Create.cshtml" />
+    <Content Include="Views\Photographs\Delete.cshtml" />
+    <Content Include="Views\Photographs\Details.cshtml" />
+    <Content Include="Views\Photographs\Edit.cshtml" />
+    <Content Include="Views\Photographs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
