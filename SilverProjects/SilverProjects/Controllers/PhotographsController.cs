@@ -15,8 +15,15 @@ namespace SilverProjects.Controllers
         private PhotographsDBContext db = new PhotographsDBContext();
 
         // GET: Photographs
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
+            var Photographs = from m in db.Photographs
+                              select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                Photographs = Photographs.Where(s => s.tags.Contains(searchString));
+            }
             return View(db.Photographs.ToList());
         }
 
