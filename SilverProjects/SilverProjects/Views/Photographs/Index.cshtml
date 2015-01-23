@@ -6,19 +6,13 @@
 
 <h2>Index</h2>
 
-<img src="/PhotographFiles/DSC02470.jpg">
 <p>
     @Html.ActionLink("Create New", "Create")
-
-    @using (Html.BeginForm()){
-        <p> Search photographs by tags: @Html.TextBox("SearchString") <br />
-        <input type="submit" value="Filter" /></p>
-    }
 </p>
 <table class="table">
     <tr>
         <th>
-           @Html.DisplayNameFor(model => model.filepath)
+            @Html.DisplayNameFor(model => model.filepath)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.tags)
