@@ -10,7 +10,7 @@ namespace SilverProjects.Models
     public class Photographs
     {
         public int ID { get; set; }
-        public string filepath { get; set; }
+        public HtmlString filepath { get; set; }
         public string tags { get; set; }
         public string category { get; set; }
         

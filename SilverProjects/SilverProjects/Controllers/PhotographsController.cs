@@ -24,7 +24,7 @@ namespace SilverProjects.Controllers
             {
                 Photographs = Photographs.Where(s => s.tags.Contains(searchString));
             }
-            return View(db.Photographs.ToList());
+            return View(Photographs);
         }
 
         // GET: Photographs/Details/5
