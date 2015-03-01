@@ -1,38 +1,53 @@
 ﻿@model IEnumerable<SilverProjects.Models.Photos>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Photography Gallery";
 }
 
-<h2>Index</h2>
+<h2>Photography Gallery</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
+    <!--placeholder-->
+
+@foreach (var item in Model)
+{
+
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FileName)
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Tags)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Category)
+            @Html.DisplayNameFor(model => model.Comments)
         </th>
         <th></th>
     </tr>
-
-@foreach (var item in Model) {
     <tr>
         <td>
-            <img src="~/PhotographFiles/@Html.DisplayFor(modelItem => item.FileName)">
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            <img src="\PhotographFiles\@Html.DisplayFor(modelItem => item.FileName)">
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Tags)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Category)
+            @Html.DisplayFor(modelItem => item.Comments)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

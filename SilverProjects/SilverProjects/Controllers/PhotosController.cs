@@ -46,7 +46,7 @@ namespace SilverProjects.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,FileName,Tags,Category")] Photos photos)
+        public ActionResult Create([Bind(Include = "ID,Title,FileName,Category,Tags,Comments")] Photos photos)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace SilverProjects.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,FileName,Tags,Category")] Photos photos)
+        public ActionResult Edit([Bind(Include = "ID,Title,FileName,Category,Tags,Comments")] Photos photos)
         {
             if (ModelState.IsValid)
             {
