@@ -26,7 +26,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.FileName)
+            <img src="~/PhotographFiles/@Html.DisplayFor(modelItem => item.FileName)">
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Tags)
