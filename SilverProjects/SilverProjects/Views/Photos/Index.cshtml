@@ -17,11 +17,9 @@
 
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayFor(modelItem => item.Title)
         </th>
-        <th>
-            
-        </th>
+     
         <th>
             @Html.DisplayNameFor(model => model.Category)
         </th>
@@ -35,11 +33,9 @@
     </tr>
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
             <img src="\PhotographFiles\@Html.DisplayFor(modelItem => item.FileName)">
         </td>
+
         <td>
             @Html.DisplayFor(modelItem => item.Category)
         </td>
